@@ -1,0 +1,39 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { GITHUB_REPO_URL } from "../config/site";
+
+const releasesURL = `${GITHUB_REPO_URL}/releases`;
+---
+<BaseLayout title="Download" description="Get BotConnector — track releases and installation instructions on GitHub.">
+  <section class="container page-header">
+    <h1>Get BotConnector</h1>
+    <p>
+      BotConnector is being rebuilt on the goose foundation. Releases,
+      install instructions, and platform support are published on GitHub
+      as they become available — follow the repository to get notified.
+    </p>
+    <div class="actions">
+      <a class="primary" href={releasesURL}>View releases on GitHub</a>
+      <a class="secondary" href={GITHUB_REPO_URL}>Browse the source</a>
+    </div>
+  </section>
+  <section class="container prose">
+    <h2>In the meantime</h2>
+    <p>
+      Read <a href="/about">why BotConnector is moving onto goose</a>, or
+      follow progress on the <a href="/blog">blog</a>. Once a build is
+      published, this page will link directly to platform-specific
+      installers.
+    </p>
+  </section>
+</BaseLayout>
+<style>
+  .page-header { padding-block: var(--space-6) var(--space-4); max-width: 640px; }
+  .page-header p { color: var(--color-text-muted); font-size: 1.05rem; }
+  .actions { display: flex; gap: var(--space-3); flex-wrap: wrap; margin-top: var(--space-4); }
+  .primary { background: var(--color-accent); color: white; padding: var(--space-3) var(--space-4); border-radius: var(--radius); text-decoration: none; font-weight: 600; }
+  .primary:hover { background: var(--color-accent-hover); color: white; }
+  .secondary { border: 1px solid var(--color-border); padding: var(--space-3) var(--space-4); border-radius: var(--radius); text-decoration: none; color: var(--color-text); }
+  .prose { padding-block: var(--space-4) var(--space-7); max-width: 640px; }
+  .prose p { color: var(--color-text-muted); }
+</style>
