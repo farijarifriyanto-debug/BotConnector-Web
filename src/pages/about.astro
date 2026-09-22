@@ -1,0 +1,43 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+<BaseLayout title="About" description="Why BotConnector is moving onto the goose foundation, and what stays the same for users.">
+  <section class="container prose">
+    <h1>About BotConnector</h1>
+    <p>
+      BotConnector started as a local-first AI workspace and command-line
+      client: discover GGUF models, manage a verified local runtime, and
+      chat from the terminal, a desktop app, or a browser workspace —
+      without your prompts leaving your machine unless you say so.
+    </p>
+    <h2>Why we're moving onto goose</h2>
+    <p>
+      Building and maintaining an agent runtime, a tool-approval system, an
+      MCP implementation, and a desktop shell from scratch is a lot of
+      surface area to keep production-grade. <a href="https://github.com/aaif-goose/goose">goose</a>
+      already solves this well: it's an open-source agent runtime from the
+      <strong>Agentic AI Foundation</strong>, part of the Linux Foundation,
+      licensed under Apache 2.0, with a CLI, a native desktop app, 15+
+      supported providers, and 70+ Model Context Protocol extensions out of
+      the box.
+    </p>
+    <p>
+      BotConnector is becoming a distribution of goose — the same
+      local-first philosophy, running on a foundation with far more hands
+      maintaining it than one project alone. This is a rebrand of the
+      surface, not a rewrite of the ideas: goose is used as-is, with
+      BotConnector's product identity applied at the branding layer only.
+    </p>
+    <h2>What doesn't change</h2>
+    <ul>
+      <li>Local-first defaults — nothing is sent to the cloud implicitly.</li>
+      <li>CLI, desktop, and API access to the same agent.</li>
+      <li>An open extension model, not a closed plugin store.</li>
+    </ul>
+  </section>
+</BaseLayout>
+<style>
+  .prose { padding-block: var(--space-6) var(--space-7); max-width: 720px; }
+  .prose h2 { margin-top: var(--space-6); }
+  .prose p, .prose li { color: var(--color-text-muted); font-size: 1.05rem; }
+</style>
