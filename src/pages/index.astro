@@ -1,0 +1,29 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Hero from "../components/Hero.astro";
+import FeatureCard from "../components/FeatureCard.astro";
+
+const capabilities = [
+  { title: "Local-first by default", description: "Run models on your own hardware. Nothing leaves your machine unless you explicitly choose a cloud provider." },
+  { title: "Built on goose", description: "BotConnector runs on goose, the open agent runtime from the Agentic AI Foundation (Linux Foundation) — a production-grade foundation, not a hobby project." },
+  { title: "CLI, desktop, and API", description: "Use BotConnector from the terminal, a native desktop app, or embed it via its API — the same agent, three surfaces." },
+  { title: "Open extension model", description: "Connect tools and data sources through the Model Context Protocol, the same open standard goose supports." },
+];
+---
+<BaseLayout>
+  <Hero
+    eyebrow="Now migrating to goose"
+    title="An AI agent that runs where your work happens"
+    subtitle="BotConnector is a local-first AI workspace and CLI, rebuilt on goose — the open, production-grade agent foundation from the Agentic AI Foundation."
+    primaryHref="/download"
+    primaryLabel="Get BotConnector"
+    secondaryHref="/about"
+    secondaryLabel="Why goose"
+  />
+  <section class="container capabilities">
+    {capabilities.map((c) => <FeatureCard title={c.title} description={c.description} />)}
+  </section>
+</BaseLayout>
+<style>
+  .capabilities { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: var(--space-4); padding-block: var(--space-6); }
+</style>

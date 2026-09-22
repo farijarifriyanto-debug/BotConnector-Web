@@ -1,0 +1,33 @@
+---
+interface Props {
+  eyebrow?: string;
+  title: string;
+  subtitle: string;
+  primaryHref: string;
+  primaryLabel: string;
+  secondaryHref?: string;
+  secondaryLabel?: string;
+}
+const { eyebrow, title, subtitle, primaryHref, primaryLabel, secondaryHref, secondaryLabel } = Astro.props;
+---
+<section class="hero">
+  <div class="container hero-inner">
+    {eyebrow && <p class="eyebrow">{eyebrow}</p>}
+    <h1>{title}</h1>
+    <p class="subtitle">{subtitle}</p>
+    <div class="actions">
+      <a class="primary" href={primaryHref}>{primaryLabel}</a>
+      {secondaryHref && <a class="secondary" href={secondaryHref}>{secondaryLabel}</a>}
+    </div>
+  </div>
+</section>
+<style>
+  .hero { padding-block: var(--space-7); text-align: center; }
+  .eyebrow { color: var(--color-accent); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; font-size: 0.85rem; }
+  h1 { font-size: clamp(2.25rem, 5vw, 3.5rem); margin: var(--space-3) 0; }
+  .subtitle { color: var(--color-text-muted); font-size: 1.15rem; max-width: 640px; margin: 0 auto var(--space-5); }
+  .actions { display: flex; justify-content: center; gap: var(--space-3); flex-wrap: wrap; }
+  .primary { background: var(--color-accent); color: white; padding: var(--space-3) var(--space-4); border-radius: var(--radius); text-decoration: none; font-weight: 600; }
+  .primary:hover { background: var(--color-accent-hover); color: white; }
+  .secondary { border: 1px solid var(--color-border); padding: var(--space-3) var(--space-4); border-radius: var(--radius); text-decoration: none; color: var(--color-text); }
+</style>
