@@ -8,7 +8,7 @@ import sitemap from '@astrojs/sitemap';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://farijarifriyanto-debug.github.io',
-  base: '/BotConnector-Website',
+  base: '/BotConnector-Web',
   integrations: [
     starlight({
       title: 'BotConnector Docs',
