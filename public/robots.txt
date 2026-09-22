@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://farijarifriyanto-debug.github.io/BotConnector-Website/sitemap-index.xml
