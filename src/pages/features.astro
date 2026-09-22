@@ -1,0 +1,41 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import FeatureCard from "../components/FeatureCard.astro";
+
+const sections = [
+  {
+    heading: "Chat and agent sessions",
+    body: "Start a conversation from the CLI, the desktop app, or embed BotConnector via its API. Every surface talks to the same agent runtime, so context and behavior stay consistent wherever you work.",
+  },
+  {
+    heading: "Model Context Protocol extensions",
+    body: "Connect BotConnector to your existing tools — file systems, databases, internal APIs, or third-party services — through MCP, the open standard goose already supports across its ecosystem.",
+  },
+  {
+    heading: "Provider flexibility",
+    body: "Choose a local model through a managed runtime, or bring your own cloud provider credentials. Local prompts stay local by default; cloud routing is always an explicit, visible choice.",
+  },
+  {
+    heading: "Recipes and guided workflows",
+    body: "Package a multi-step task — research, a refactor, a report — into a reusable, shareable recipe, so repeatable work doesn't start from a blank prompt every time.",
+  },
+  {
+    heading: "Approval-aware tool use",
+    body: "Actions that touch your files or run commands go through an approval flow you control, not silent execution — the same safety model the goose foundation ships with.",
+  },
+];
+---
+<BaseLayout title="Features" description="What BotConnector can do: chat and agent sessions, MCP extensions, provider flexibility, recipes, and approval-aware tool use.">
+  <section class="container page-header">
+    <h1>Features</h1>
+    <p>BotConnector inherits a production-grade feature set from the goose foundation, wrapped in a local-first workflow.</p>
+  </section>
+  <section class="container feature-list">
+    {sections.map((s) => <FeatureCard title={s.heading} description={s.body} />)}
+  </section>
+</BaseLayout>
+<style>
+  .page-header { padding-block: var(--space-6) var(--space-4); }
+  .page-header p { color: var(--color-text-muted); font-size: 1.1rem; max-width: 640px; }
+  .feature-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--space-4); padding-block: var(--space-4) var(--space-7); }
+</style>
