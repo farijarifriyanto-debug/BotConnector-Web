@@ -8,6 +8,6 @@ BotConnector is a local-first AI workspace and CLI, built on
 BotConnector is, how installation will work once a build is published,
 and answers to common questions.
 
-- [Overview](/docs/overview/) — what BotConnector is and how it relates to goose
-- [Installation](/docs/installation/) — current status and what to expect
-- [FAQ](/docs/faq/) — common questions
+- [Overview](overview/) — what BotConnector is and how it relates to goose
+- [Installation](installation/) — current status and what to expect
+- [FAQ](faq/) — common questions

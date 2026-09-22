@@ -12,7 +12,7 @@ goose itself documents installation today.
 
 In the meantime:
 
-- [View releases on GitHub](/download/) — this always reflects the real,
+- [View releases on GitHub](../../download/) — this always reflects the real,
   current release state.
-- [Read the migration announcement](/blog/announcing-goose-foundation/)
+- [Read the migration announcement](../../blog/announcing-goose-foundation/)
   for background on why this is happening.

@@ -1,15 +1,16 @@
 ---
 import { SITE_TITLE } from "../config/site";
+const base = import.meta.env.BASE_URL.replace(/\/?$/, "/");
 const nav = [
-  { href: "/features", label: "Features" },
-  { href: "/about", label: "About" },
-  { href: "/blog", label: "Blog" },
-  { href: "/docs/overview", label: "Docs" },
+  { href: `${base}features`, label: "Features" },
+  { href: `${base}about`, label: "About" },
+  { href: `${base}blog`, label: "Blog" },
+  { href: `${base}docs/overview`, label: "Docs" },
 ];
 ---
 <header class="site-header">
   <div class="container header-inner">
-    <a href="/" class="brand">{SITE_TITLE}</a>
+    <a href={base} class="brand">{SITE_TITLE}</a>
     <nav aria-label="Main">
       <ul>
         {nav.map((item) => (
@@ -19,7 +20,7 @@ const nav = [
     </nav>
     <div class="header-actions">
       <button id="theme-toggle" type="button" aria-label="Toggle dark mode">🌓</button>
-      <a class="cta" href="/download">Get BotConnector</a>
+      <a class="cta" href={`${base}download`}>Get BotConnector</a>
     </div>
   </div>
 </header>

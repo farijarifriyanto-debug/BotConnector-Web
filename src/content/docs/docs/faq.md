@@ -13,7 +13,7 @@ on your machine unless you explicitly choose a cloud provider.
 Maintaining a bespoke agent runtime, MCP implementation, and desktop
 shell is a lot of surface area to keep production-grade alone. goose
 already solves this, in the open, under Apache 2.0, with a much larger
-set of maintainers. See [About](/about/) for the full reasoning.
+set of maintainers. See [About](../../about/) for the full reasoning.
 
 ### Does this change how I use BotConnector day to day?
 
@@ -22,6 +22,6 @@ Branding changes; behavior doesn't.
 
 ### Where can I follow progress?
 
-The [blog](/blog/) posts updates as the migration moves forward, and
-[GitHub Releases](/download/) is the source of truth for what's actually
+The [blog](../../blog/) posts updates as the migration moves forward, and
+[GitHub Releases](../../download/) is the source of truth for what's actually
 shipped.

@@ -2,6 +2,7 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { GITHUB_REPO_URL } from "../config/site";
 
+const base = import.meta.env.BASE_URL.replace(/\/?$/, "/");
 const releasesURL = `${GITHUB_REPO_URL}/releases`;
 ---
 <BaseLayout title="Download" description="Get BotConnector — track releases and installation instructions on GitHub.">
@@ -20,8 +21,8 @@ const releasesURL = `${GITHUB_REPO_URL}/releases`;
   <section class="container prose">
     <h2>In the meantime</h2>
     <p>
-      Read <a href="/about">why BotConnector is moving onto goose</a>, or
-      follow progress on the <a href="/blog">blog</a>. Once a build is
+      Read <a href={`${base}about`}>why BotConnector is moving onto goose</a>, or
+      follow progress on the <a href={`${base}blog`}>blog</a>. Once a build is
       published, this page will link directly to platform-specific
       installers.
     </p>

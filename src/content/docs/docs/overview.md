@@ -17,4 +17,4 @@ does well:
 - Model Context Protocol (MCP) extensions for connecting external tools.
 - An approval flow for actions that touch your files or run commands.
 
-See [About](/about/) for why this migration is happening.
+See [About](../../about/) for why this migration is happening.
